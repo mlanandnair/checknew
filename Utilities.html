@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul1 li1  {
+    float: right;
+}
+
+ul1 li1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul1 li1 a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul1.active {
+    background-color: #4CAF50;
+}
+body {
+  margin: 0;
+  min-width: 250px;
+}
+</style>
+</head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<body >
+<header>
+<ul1 >
+<a href="index.html"><h1 style="font-family: 'Times New Roman', Times, serif;color:whitesmoke;float:left;"><img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b3/89/d2b3896374241cdfd1b63909b4658cb1.jpg" alt="logo" style=" width: 103px;
+height: 43px;">Transforming World</h1></a>
+</ul1>
+</header>
+<div style="padding-top:95px;">
+<p>Search youtube videos</p>
+<form action="http://www.youtube.com/results" method="get" target="_blank" >
+<input name="search_query" type="text" maxlength="128" />
+<select name="search_type">
+<option value=" ">Videos</option>
+<option value="search_users">Channels</option>
+</select>
+<input type="submit" value="Search" />
+</form>
+</div>
+<div style="padding-top:120px;">
+<script>
+  (function() {
+    var cx = '006775117146656666864:2gknjclxwx8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+</body>
+</html>

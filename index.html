@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" type="image/png" href="https://s-media-cache-ak0.pinimg.com/736x/d2/b3/89/d2b3896374241cdfd1b63909b4658cb1.jpg">
+<title>Transforming world</title>
+<header>
+<ul style="z-index:1;">
+<h1 style="font-family: 'Times New Roman', Times, serif;color:whitesmoke;float:left;"><img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b3/89/d2b3896374241cdfd1b63909b4658cb1.jpg" alt="logo" style=" width: 103px;
+height: 43px;">Transforming World</h1>
+  <li><a href="about.html">About</a></li>
+  <li><a href="Utilities.html">Utilities</a></li>
+  <li><a href="todolist.html">List</a></li>
+  <li><a class="active" href="#home">home</a></li>
+</ul>
+</header>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle.css">
+<body style="background-color:white;min-height: 100%;top: 0px;">
+
+<div>
+<div class="slideshow-container" style="width:100%;height:610px;position: relative;">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="http://www.desktopwallpaperhd.net/wallpapers/1/f/windows-theme-official-wallpaper-italy-discount-themes-gallery-15599.jpg" style="width:100%;height:610px">
+  <div class="text">Change your thoughts and you change your world. - Norman Vincent Peale</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="http://www.desktopwallpaperhd.net/wallpapers/0/9/back-ground-background-3161.jpg" style="width:100%;height:610px">
+  <div class="text">It is during our darkest moments that we must focus to see the light. - Aristotle Onassis</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="http://www.desktopwallpaperhd.net/wallpapers/0/c/wallpaper-discount-zixpk-zixpkcom-1868.jpg" style="width:100%;height:610px">
+  <div class="text">Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship. - Buddha</div>
+</div>
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
+</div>
+<div>
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn" style="width: auto;height: 60px;">Options</button>
+  <div class="dropdown-content" style="left:0;z-index:1;">
+    <a id="myBtn">Show date </a>
+    <a onclick="myFunction3();">Click Me to hide title</a>
+    <a onclick="myFunction4()">show title</a>
+  </div>
+</div>
+<button class="button" onclick="myFunction2()">Click Me to change style </button>
+<div class="dropdown">
+  <button class="dropbtn" style="width: auto;height: 60px;">blink bulb</button>
+  <div class="dropdown-content" style="width: 50px;height: 136px;z-index:1;">
+    <a onclick="myFunction()">Turn on</a>
+    <a onclick="myFunction1()">Turn off</a>
+    <a onclick="replaceFunction();">Replace word</a>
+    </div>
+</div>
+<img id="myImage" src="http://www.wpclipart.com/household/lights/more_lights/light_bulb_off.png" style="width:71px;height:61px;position:relative;z-index:0;float:right;">
+<p id="demo" style="position:relative;z-index:1;float:right;">start</p>
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Hi guyzzz today is </h2>
+    </div>
+    <div class="modal-body">
+      <p>Click on date to refresh </p>
+      <p onclick="this.innerHTML=Date()">click to show date</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Thank You</h3>
+    </div>
+  </div>
+
+</div>
+
+
+<button id="loc" onclick="getLocation()" style="position: relative;float: left;">Get location</button>
+<div id="map" style="width:100%;height:300px;background:#fbfbfb"></div>
+</div>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "bulb turn on.";
+    document.getElementById("myImage").src = 'http://www.wpclipart.com/household/lights/more_lights/light_bulb_On.png';
+    
+}
+</script> 
+<script>
+function myFunction1() {
+    document.getElementById("demo").innerHTML = "bulb turn off.";
+    document.getElementById("myImage").src = "http://www.wpclipart.com/household/lights/more_lights/light_bulb_off.png"; 
+     
+}
+</script>
+<script>
+function myFunction3() {
+    document.getElementById('demo').style.display="none";
+     window.alert("title hided"); 
+     }
+</script>
+<script>
+function myFunction4() {
+    document.getElementById('demo').style.display='block';
+    window.alert("title showen"); 
+     }
+</script>
+<script src="myscript.js"></script>
+<script>
+function replaceFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace(str,"hello");
+    var txt1 = str.replace(str,"start");
+    if(str==="start"||"bulb turn on."||"bulb turn off.")
+    {document.getElementById("demo").innerHTML = txt;}
+    if(str==="hello")
+    {document.getElementById("demo").innerHTML = txt1;}
+    }
+</script>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  
+}
+</script>
+<script>
+var x = document.getElementById("loc");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var myCenter = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom:15};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    var infowindow = new google.maps.InfoWindow({content:"your location"});
+    google.maps.event.addListener(marker,'click',function() {infowindow.open(map,marker);});
+    google.maps.event.addListener(map, 'click', function(event) {placeMarker(map, event.latLng);});
+}
+function myMap() {
+  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter,animation: google.maps.Animation.BOUNCE});
+  marker.setMap(map);
+  var infowindow = new google.maps.InfoWindow({content:"Start here"});
+  google.maps.event.addListener(marker,'click',function() {infowindow.open(map,marker);});
+  google.maps.event.addListener(map, 'click', function(event) {placeMarker(map, event.latLng);});
+    }
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({position: location,map: map});
+  var infowindow = new google.maps.InfoWindow({content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()});
+  infowindow.open(map,marker);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxbqCQAn3-6ipZuS3qpzpB6YXfK3YjW4&callback=myMap"></script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html> 

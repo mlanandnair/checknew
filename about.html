@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul1 li1  {
+    float: right;
+}
+
+ul1 li1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul1 li1 a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul1.active {
+    background-color: #4CAF50;
+}
+body {
+  margin: 0;
+  min-width: 250px;
+}
+.container {
+  position: absolute;
+  width: 49%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: normal; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<body >
+<header>
+<ul1 >
+<a href="index.html"><h1 style="font-family: 'Times New Roman', Times, serif;color:whitesmoke;float:left;"><img src="https://s-media-cache-ak0.pinimg.com/736x/d2/b3/89/d2b3896374241cdfd1b63909b4658cb1.jpg" alt="logo" style=" width: 103px;
+height: 43px;">Transforming World</h1></a>
+</ul1>
+</header>
+<div class="container" style="top:93px;z-index:-1;left:0px;">
+  <img src="http://hdwallpaper2013.com/wp-content/uploads/2012/12/Cristiano-Ronaldo-Black-Background-HD-Wallpaper-1080x675.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hi I am anand</div>
+  </div>
+</div>
+<div class="container" style="top:93px;z-index:-1;right:0px">
+  <img src="http://hddesktopwallpapers.in/wp-content/uploads/2015/09/cool-lion-pictures.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">loves cricket,movies and reading </div>
+  </div>
+</div>
+<div class="container" style="top:400px;z-index:-1;left:0px">
+  <img src="http://hdblackwallpaper.com/wallpaper/2015/07/black-and-white-landscape-photography-9-wide-wallpaper.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">loves To Travel</div>
+  </div>
+</div>
+<div class="container" style="top:400px;z-index:-1;right:0px">
+  <img src="http://www.wallpaperscharlie.com/wp-content/uploads/2016/05/Guitar-HD-Pictures-6.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Passionate music lover, Rahmaniac</div>
+  </div>
+</div>
+<script></script>
+</body>
+</html>
