@@ -16,3 +16,7 @@ function search() {
     $('#search-container').html('<pre>' + str + '</pre>');
   });
 }
+
+function testfunction(){
+ console.log("test function");
+}
